@@ -128,15 +128,15 @@ jobs:
       shell: bash
       run: |
         set -x
-        # Match official Motorola stock kernel timestamp and build user/host
-        KBUILD_TS="Thu Oct 16 12:28:32 UTC 2025"
-        SOURCE_DATE_EPOCH=1760617712
+        # Match official system build timestamp (ro.build.date.utc=1772075460)
+        KBUILD_TS="Thu Feb 26 03:11:00 UTC 2026"
+        SOURCE_DATE_EPOCH=1772075460
         echo "SOURCE_DATE_EPOCH=$SOURCE_DATE_EPOCH" >> $GITHUB_ENV
         echo "KBUILD_BUILD_TIMESTAMP=${KBUILD_TS}" >> $GITHUB_ENV
         echo "KBUILD_BUILD_USER=build-user" >> $GITHUB_ENV
         echo "KBUILD_BUILD_HOST=build-host" >> $GITHUB_ENV
-        echo "GIT_COMMITTER_DATE=2025-10-16T12:28:32Z" >> $GITHUB_ENV
-        echo "GIT_AUTHOR_DATE=2025-10-16T12:28:32Z" >> $GITHUB_ENV
+        echo "GIT_COMMITTER_DATE=2026-02-26T03:11:00Z" >> $GITHUB_ENV
+        echo "GIT_AUTHOR_DATE=2026-02-26T03:11:00Z" >> $GITHUB_ENV
         echo "Build timestamp set to: ${KBUILD_TS} (epoch: $SOURCE_DATE_EPOCH)"
 
     - name: Extract Sublevel and Set File Name
