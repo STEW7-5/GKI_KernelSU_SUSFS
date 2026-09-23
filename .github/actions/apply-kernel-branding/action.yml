@@ -33,10 +33,5 @@ runs:
         KERNEL_PART=$(echo "$VERSION" | cut -d- -f2)
         BRAND="${{ inputs.brand_name }}"
 
-        if [[ ${{ inputs.version }} == "android15-6.6" || ${{ inputs.version }} == "android16-6.12" ]]; then
-          KERNEL_STRING="$KERNEL_PART.${{ inputs.sublevel }}-$ANDROID_PART"
-          sed -i '$d' scripts/setlocalversion && echo "echo \"$KERNEL_STRING-$BRAND\"" >> scripts/setlocalversion
-        else
-          sed -i '$d' scripts/setlocalversion && echo "echo \"-$ANDROID_PART-$BRAND\"" >> scripts/setlocalversion
-        fi
+        printf '#!/bin/sh\necho "-android14-11-g0cc282c6fd48-ab14281575"\n' > scripts/setlocalversion
         chmod +x scripts/setlocalversion
