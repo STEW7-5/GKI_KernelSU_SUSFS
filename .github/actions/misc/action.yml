@@ -32,18 +32,12 @@ runs:
           CONFIG_CMDLINE="mitigations=off audit=0 rcupdate.rcu_expedited=0"
           CONFIG_CMDLINE_EXTEND=y
           CONFIG_SLUB_DEBUG=n
-          CONFIG_SLUB_DEBUG_ON=n
-          CONFIG_PAGE_POISONING=n
-          CONFIG_DEBUG_PREEMPT=n
           CONFIG_LRU_GEN=y
           CONFIG_LRU_GEN_ENABLED=y
-          CONFIG_LRU_GEN_STATS=n
           CONFIG_TCP_CONG_BBR=y
           CONFIG_DEFAULT_TCP_CONG="bbr"
           CONFIG_CRYPTO_ZSTD=y
+          CONFIG_ZRAM_DEF_COMP_ZSTD=y
           CONFIG_ZRAM_DEF_COMP="zstd"
-          CONFIG_ZRAM_MULTI_COMP=y
-          CONFIG_DEFAULT_MQ_DEADLINE=y
           CONFIG_MQ_IOSCHED_DEADLINE=y
-          CONFIG_CRYPTO_MANAGER_DISABLE_TESTS=y
           
