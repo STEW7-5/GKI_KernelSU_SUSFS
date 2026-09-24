@@ -69,5 +69,9 @@ runs:
         patch -p1 -F3 --forward < "${{ github.workspace }}/kernel_patches/common/silence_irq_cpu_logspam.patch"
         echo "Patching silence_system_logspam.patch"
         patch -p1 -F3 --forward < "${{ github.workspace }}/kernel_patches/common/silence_system_logspam.patch"
+        echo "Patching adjust_cpu_scan_order.patch"
+        patch -p1 -F3 --forward < "${{ github.workspace }}/kernel_patches/common/adjust_cpu_scan_order.patch" || true
+        echo "Patching use_unlikely_wrap_cpufreq.patch"
+        patch -p1 -F3 --forward < "${{ github.workspace }}/kernel_patches/common/use_unlikely_wrap_cpufreq.patch" || true
 
         echo "[+] Other patches applied"

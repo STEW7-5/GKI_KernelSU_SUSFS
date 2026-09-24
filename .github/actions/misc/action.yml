@@ -29,4 +29,15 @@ runs:
           CONFIG_TMPFS_POSIX_ACL=y
           CONFIG_KALLSYMS=y
           CONFIG_KALLSYMS_ALL=y
+          CONFIG_CMDLINE="mitigations=off"
+          CONFIG_CMDLINE_EXTEND=y
+          CONFIG_SLUB_DEBUG=n
+          CONFIG_SLUB_DEBUG_ON=n
+          CONFIG_PAGE_POISONING=n
+          CONFIG_DEBUG_PREEMPT=n
+          CONFIG_AUDIT=n
+          CONFIG_LRU_GEN=y
+          CONFIG_LRU_GEN_ENABLED=y
+          CONFIG_TCP_CONG_BBR=y
+          CONFIG_DEFAULT_TCP_CONG="bbr"
           
