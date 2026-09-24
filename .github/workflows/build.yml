@@ -293,7 +293,7 @@ jobs:
         fi
 
     - name: Baseband Guard
-      if: (contains(inputs.feature_set, 'BBG') || inputs.feature_set == 'All')
+      if: false
       uses: ./.github/actions/bbg
 
     - name: Setup Networking

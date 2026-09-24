@@ -77,7 +77,7 @@ on:
       use_bbg:
         description: "Baseband Guard"
         type: boolean
-        default: true
+        default: false
       use_net:
         description: "Networking"
         type: boolean
